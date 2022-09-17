@@ -1,0 +1,35 @@
+nav {
+  width: 100vw;
+  height: 120px;
+  background-color: #4056A1;
+  color: #FFFFFF;
+  position: fixed;
+}
+
+nav .nav {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.5em 0 1.5em;
+}
+nav span {
+  font-family: 'Bungee', cursive;
+ }
+
+nav .nav-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  
+}
+
+nav .nav-right p {
+  margin-bottom: 0.1em;
+}
+
+nav .icon {
+  color: #FF0000;
+  margin: 0 0 0 0;
+}
