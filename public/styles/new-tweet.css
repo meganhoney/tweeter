@@ -5,6 +5,7 @@
 
 .new-tweet textarea {
   width: 100%;
+  height: 1.5em;
   border: none;
   border-bottom: 3px solid #545149;
   background-color: #f4f1ec;
@@ -14,9 +15,15 @@
 .submit-counter {
   display: flex;
   justify-content: space-between;
+  padding-top: 0.75em;
 }
+
 .counter {
   font-family: 'Bungee', cursive;
+}
+
+.over-limit {
+  color: #FF0000;
 }
 
 .new-tweet button {
