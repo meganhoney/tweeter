@@ -1,0 +1,59 @@
+.ind-tweet p {
+  margin: 0;
+}
+
+.all-tweets {
+  width: 60%;
+  margin: 1em auto;
+  border: 3px solid #545149;
+}
+
+.all-tweets:hover {
+  box-shadow: 0.25em 0.25em #B0C2FF;
+}
+
+.ind-tweet header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+}
+
+.avi-name {
+  display: flex;
+  justify-content: center;
+}
+
+.avi-name p {
+  margin-left: 0.5em;
+}
+
+.username {
+  color: #cccccc;
+  font-weight: 600;
+}
+
+.ind-tweet-text {
+  border-bottom: 3px solid #545149;
+  padding: 0.8em;
+  margin: 0 0.5em;
+}
+
+.ind-tweet footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.75em 1.5em;
+  font-size: 0.6em;
+}
+
+.ind-tweet footer i {
+  color: #4056A1;
+}
+
+.ind-tweet footer i:hover {
+  color: #CEAC00;
+  cursor: pointer;
+}
+
+.ind-tweet footer i:nth-child(2) {
+  padding: 0 0.5em;
+}
