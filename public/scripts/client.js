@@ -3,7 +3,6 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
-
 $(document).ready(function() {
 
   $(".new-tweet form").submit((event)=> {
@@ -30,6 +29,8 @@ $(document).ready(function() {
   loadTweets();
 
   const createTweetElement = function(tweet) {
+
+
     // html markup for tweet
     let $tweet = `
     <article class="ind-tweet">
@@ -44,7 +45,7 @@ $(document).ready(function() {
             <p>${(tweet.content.text)}</p>
           </div>
           <footer>
-            <p>${(tweet.created_at)}</p>
+            <p>${timeago.format((tweet.created_at))}</p>
             <div>
               <i class="fa-solid fa-flag"></i>
               <i class="fa-solid fa-retweet"></i>
