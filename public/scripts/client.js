@@ -8,7 +8,16 @@ $(document).ready(function() {
 
   $(".new-tweet form").submit((event)=> {
     event.preventDefault();
-    });
+
+    const $data = $("#tweet-text");
+    $data.serialize();
+    $.ajax({
+      type: "POST",
+      url: "/tweets/",
+      data: $data
+    })
+    console.log($data);
+  });
 
   const createTweetElement = function(tweet) {
     // html markup for tweet
