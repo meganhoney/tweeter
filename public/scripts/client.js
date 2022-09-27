@@ -11,9 +11,22 @@ $(document).ready(function() {
     const $data = $("#tweet-text");
 
     if (!$data.val()) {
-      alert("Please input a valid tweet.");
+
+      const $emptyMsgHTML = 
+      `<i class="fa-solid fa-circle-exclamation"></i>
+      <span>Please input a valid tweet.</span>
+      <i class="fa-solid fa-circle-exclamation"></i>`;
+
+      //$(emptyMsgHTML).appendTo("#error-message");
+      $("#error-message").append($emptyMsgHTML);
+      $("#error-message").slideDown();
+      
     } else if ($data.val().length > 140) {
-      alert("Your tweet is too long. Please keep to under 140 characters.");
+      const longMsg = "Please keep your tweet under 140 characters.";
+      $(`<i class="fa-solid fa-circle-exclamation"></i>
+      <span>${longMsg}</span>
+      <i class="fa-solid fa-circle-exclamation"></i>`).appendTo("#error-message");
+      $("#error-message").slideDown();
     } else {
       $data.serialize();
       $.ajax("/tweets/", {
@@ -39,9 +52,14 @@ $(document).ready(function() {
 
   loadTweets();
 
+// escape function to escape unsafe characters from user input (tweet text)
+  const escape = function (str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
+
   const createTweetElement = function(tweet) {
-
-
     // html markup for tweet
     let $tweet = `
     <article class="ind-tweet">
@@ -53,10 +71,10 @@ $(document).ready(function() {
             <p class="handle">${tweet.user.handle}</p>
           </header>
           <div class="ind-tweet-text">
-            <p>${(tweet.content.text)}</p>
+            <p>${escape(tweet.content.text)}</p>
           </div>
           <footer>
-            <p>${timeago.format((tweet.created_at))}</p>
+            <p>${timeago.format(tweet.created_at)}</p>
             <div>
               <i class="fa-solid fa-flag"></i>
               <i class="fa-solid fa-retweet"></i>
