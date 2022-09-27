@@ -21,13 +21,19 @@
 .avi-name {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .avi-name p {
   margin-left: 0.5em;
 }
 
-.username {
+.avi-name img {
+  width: 1.5em;
+  height: 1.5em;
+}
+
+.handle {
   color: #cccccc;
   font-weight: 600;
 }
