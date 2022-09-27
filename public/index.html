@@ -55,10 +55,13 @@
           <h2>Your Name</h2>
       </div>
     </header>
-    <!-- Page-specific (main) content here -->
+    <!-- Page-specific (main) content here - create a tweet -->
     <main class="container">
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
+        <div id="error-message">
+          <!-- Error messages inserted with jQuery if tweet is empty or too long -->
+        </div>
         <form method="POST" action="/tweets/">
           <label for="tweet-text">What are you humming about?</label>
           <textarea name="text" id="tweet-text"></textarea>

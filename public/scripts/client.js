@@ -17,16 +17,18 @@ $(document).ready(function() {
       <span>Please input a valid tweet.</span>
       <i class="fa-solid fa-circle-exclamation"></i>`;
 
-      //$(emptyMsgHTML).appendTo("#error-message");
       $("#error-message").append($emptyMsgHTML);
       $("#error-message").slideDown();
       
     } else if ($data.val().length > 140) {
-      const longMsg = "Please keep your tweet under 140 characters.";
-      $(`<i class="fa-solid fa-circle-exclamation"></i>
-      <span>${longMsg}</span>
-      <i class="fa-solid fa-circle-exclamation"></i>`).appendTo("#error-message");
+      const $longMsgHTML = 
+      `<i class="fa-solid fa-circle-exclamation"></i>
+      <span>Please keep your tweet to under 140 characters.</span>
+      <i class="fa-solid fa-circle-exclamation"></i>`;
+      
+      $("#error-message").append($longMsgHTML);
       $("#error-message").slideDown();
+
     } else {
       $data.serialize();
       $.ajax("/tweets/", {
