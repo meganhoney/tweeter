@@ -1,15 +1,19 @@
-.ind-tweet p {
-  margin: 0;
-}
-
 .all-tweets {
   width: 60%;
   margin: 1em auto;
+}
+
+.ind-tweet {
+  margin: 1em 0;
   border: 3px solid #545149;
 }
 
-.all-tweets:hover {
+.ind-tweet:hover {
   box-shadow: 0.25em 0.25em #B0C2FF;
+}
+
+.ind-tweet p {
+  margin: 0;
 }
 
 .ind-tweet header {
