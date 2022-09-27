@@ -4,20 +4,41 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-$(document).ready(function() {
-  const createTweetElement = function() {
-    //let $tweet = /* Your code for creating the tweet element */
-    // ...
+//$(document).ready(function() {
+  const createTweetElement = function(tweet) {
+    // html markup for tweet
+    let $tweet = `
+    <article class="ind-tweet">
+          <header>
+            <div class="avi-name">
+              <img src="${tweet[`user`][`avatars`]}"/>
+              <p>${tweet[`user`][`name`]}</p>
+            </div>
+            <p class="handle">${tweet[`user`][`handle`]}</p>
+          </header>
+          <div class="ind-tweet-text">
+            <p>${(tweet[`content`][`text`])}</p>
+          </div>
+          <footer>
+            <p>${(tweet[`created_at`])}</p>
+            <div>
+              <i class="fa-solid fa-flag"></i>
+              <i class="fa-solid fa-retweet"></i>
+              <i class="fa-solid fa-heart"></i>
+            </div>
+          </footer>
+        </article>
+    `
     return $tweet;
   };
 
-  const renderTweets = function(tweets) {
+  //const renderTweets = function(tweets) {
   // loops through tweets
   // calls createTweetElement for each tweet
   // takes return value and appends it to the tweets container
-  };
+  //};
 
-});
+//});
 
 // Test / driver code (temporary). Eventually will get this from the server.
 const tweetData = {
