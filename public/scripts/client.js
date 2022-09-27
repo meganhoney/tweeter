@@ -7,6 +7,8 @@ $(document).ready(function() {
 
   $(".new-tweet form").submit((event)=> {
     event.preventDefault();
+    
+    $(`#error-message`).empty();
 
     const $data = $("#tweet-text");
 
