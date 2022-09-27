@@ -9,12 +9,19 @@ $(document).ready(function() {
     event.preventDefault();
 
     const $data = $("#tweet-text");
-    $data.serialize();
-    $.ajax("/tweets/", {
-      method: "POST",
-      data: $data
-    })
-    console.log($data);
+
+    if (!$data.val()) {
+      alert("Please input a valid tweet.");
+    } else if ($data.val().length > 140) {
+      alert("Your tweet is too long. Please keep to under 140 characters.");
+    } else {
+      $data.serialize();
+      $.ajax("/tweets/", {
+        method: "POST",
+        data: $data
+      })
+    }
+    
   });
 
   const loadTweets = function() {
