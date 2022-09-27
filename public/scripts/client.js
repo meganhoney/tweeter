@@ -20,6 +20,10 @@ $(document).ready(function() {
         method: "POST",
         data: $data
       })
+        .then(() => {
+        $("#tweet-text").val('');
+        loadTweets();
+      });
     }
     
   });
@@ -70,7 +74,7 @@ $(document).ready(function() {
   // takes return value and appends it to the tweets container
   const $tweets = $("#tweets-container").empty();
   for (let key of Object.keys(tweets)) {
-    $(createTweetElement(tweets[key])).appendTo($tweets);
+    $(createTweetElement(tweets[key])).prependTo($tweets);
   }
   };
 
