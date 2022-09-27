@@ -5,6 +5,11 @@
  */
 
 $(document).ready(function() {
+
+  $(".new-tweet form").submit((event)=> {
+    event.preventDefault();
+    });
+
   const createTweetElement = function(tweet) {
     // html markup for tweet
     let $tweet = `
@@ -36,7 +41,7 @@ $(document).ready(function() {
   // loops through tweets
   // calls createTweetElement for each tweet
   // takes return value and appends it to the tweets container
-  const $tweets = $(`#tweets-container`).empty();
+  const $tweets = $("#tweets-container").empty();
   for (let key of Object.keys(tweets)) {
     $(createTweetElement(tweets[key])).appendTo($tweets);
   }
