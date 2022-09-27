@@ -7,7 +7,7 @@ $(document).ready(function() {
 
   $(".new-tweet form").submit((event)=> {
     event.preventDefault();
-    
+
     $(`#error-message`).empty();
 
     const $data = $("#tweet-text");
@@ -15,18 +15,22 @@ $(document).ready(function() {
     if (!$data.val()) {
 
       const $emptyMsgHTML = 
-      `<i class="fa-solid fa-circle-exclamation"></i>
+      `<div class="error">
+      <i class="fa-solid fa-circle-exclamation"></i>
       <span>Please input a valid tweet.</span>
-      <i class="fa-solid fa-circle-exclamation"></i>`;
+      <i class="fa-solid fa-circle-exclamation"></i>
+      </div>`;
 
       $("#error-message").append($emptyMsgHTML);
       $("#error-message").slideDown();
       
     } else if ($data.val().length > 140) {
       const $longMsgHTML = 
-      `<i class="fa-solid fa-circle-exclamation"></i>
+      `<div class="error">
+      <i class="fa-solid fa-circle-exclamation"></i>
       <span>Please keep your tweet to under 140 characters.</span>
-      <i class="fa-solid fa-circle-exclamation"></i>`;
+      <i class="fa-solid fa-circle-exclamation"></i>
+      </div>`;
       
       $("#error-message").append($longMsgHTML);
       $("#error-message").slideDown();

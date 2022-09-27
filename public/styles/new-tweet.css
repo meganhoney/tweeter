@@ -45,8 +45,21 @@
   cursor: pointer;
 }
 
+/*  ERROR MESSAGES */
 #error-message {
   display: none;
   color: #FF0000;
+  border: 3px solid #FF0000;
+  padding: 1em;
+  margin: 1em;
 
+}
+
+.error {
+  display: flex;
+  justify-content: center;
+}
+
+.error span {
+  margin: 0 0.5em;
 }
