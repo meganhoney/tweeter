@@ -31,4 +31,16 @@ nav .nav-right p {
 
 nav .icon {
   color: #FF0000;
+  position: relative;
+  animation: movedown 1s infinite;
+}
+
+@keyframes movedown {
+  0%, 100% {
+    top: 0px;
+  }
+
+  50% {
+    top: 10px;
+  }
 }
