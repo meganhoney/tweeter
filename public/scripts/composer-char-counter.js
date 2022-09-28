@@ -7,7 +7,7 @@ $(document).ready(function() {
     $text = $(this).val();
     $charsLeft = 140 - $text.length;
     
-    $counter = $(this).closest("form").find(".counter")
+    $counter = $(this).closest("form").find(".counter");
     $counter.text($charsLeft);
 
     if ($charsLeft < 0) {
