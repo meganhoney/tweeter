@@ -1,7 +1,8 @@
 // Character counter for tweet form input
-
+// Counts characters as they are type into form input via keyup
+// Adjusts text display via counter id to show characters remaining/characters over
 $(document).ready(function() {
-  $("#tweet-text").on( "keyup", function(event) {
+  $("#tweet-text").on("keyup", function(event) {
     
     $text = $(this).val();
     $charsLeft = 140 - $text.length;
