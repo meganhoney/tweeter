@@ -21,11 +21,23 @@ body {
   font-family: 'Source Sans Pro', sans-serif;
 }
 
+main {
+  width: 90%;
+  margin: 0 auto;
+}
+
 /** MEDIA QUERIES **/
+
+/* Tablets - minimum 768px, maximum 1024px */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  main {
+    width: 100%;
+  }
+}
 
  /* Laptops / Desktops: minimum width of 1024px */
  @media only screen and (min-width: 1024px) {
   main {
-    padding: 200px 20px 0 30px;
+    padding: 200px 0 0 20px;
   }
 }
