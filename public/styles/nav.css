@@ -1,7 +1,8 @@
 nav {
   width: 100vw;
   height: 120px;
-  background-color: #4056A1;
+  background-color: #B0C2FF;
+  background-image: url(../images/transparent_header_bg_batthern.png);
   color: #FFFFFF;
   position: fixed;
 }
@@ -32,7 +33,7 @@ nav .nav-right p {
 nav .icon {
   color: #FF0000;
   position: relative;
-  animation: movedown 1s infinite;
+  animation: movedown 1.2s infinite;
 }
 
 @keyframes movedown {
@@ -41,6 +42,16 @@ nav .icon {
   }
 
   50% {
-    top: 10px;
+    top: 8px;
   }
 }
+
+/** MEDIA QUERIES **/
+
+  /* Styles for tablets and laptop/desktop: minimum width of 768px */
+  @media only screen and (min-width: 768px) {
+    nav {
+      background-color: #4056A1;
+      background-image: none;
+    }
+  }

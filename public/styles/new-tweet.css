@@ -49,6 +49,7 @@
 #error-message {
   display: none;
   color: #FF0000;
+  background-color: #ffffff;
   border: 3px solid #FF0000;
   padding: 1em;
   margin: 1em;
@@ -74,10 +75,30 @@
     padding-top: 200px;
     display: inline-block;
     padding-left: 10px;
+    background-color: #B0C2FF;
+    background-image: url(../images/transparent_header_bg_batthern.png);
     
   }
 
   .new-tweet h2 {
     text-align: center;
+  }
+
+  .new-tweet form {
+    text-align: center;
+    font-weight: 600;
+  }
+
+  .new-tweet form label {
+    text-shadow: 1px 1px #ffffff;
+  }
+}
+
+/* Laptops / Desktops: minimum width of 1024px */
+@media only screen and (min-width: 1024px) {
+  .new-tweet {
+    width: 60%;
+    float: right;
+    
   }
 }

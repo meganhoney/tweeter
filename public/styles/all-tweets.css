@@ -1,5 +1,5 @@
 .all-tweets {
-  width: 60%;
+  width: 90%;
   margin: 1em auto;
 }
 
@@ -66,4 +66,13 @@
 
 .ind-tweet footer i:nth-child(2) {
   padding: 0 0.5em;
+}
+
+/* Laptops / Desktops: minimum width of 1024px */
+@media only screen and (min-width: 1024px) {
+  .all-tweets {
+    width: 60%;
+    float: right;
+    
+  }
 }

@@ -9,6 +9,14 @@ header.user-info {
   background-image: url(../images/transparent_header_bg_batthern.png);
 }
 
+.name-bio h2 {
+  text-shadow: 1px 1px #ffffff;
+}
+
+.name-bio p {
+  display: none;
+}
+
 /** MEDIA QUERIES **/
 
 /* Tablet: minimum width of 768px to maximum width of 1024px */
@@ -18,3 +26,30 @@ header.user-info {
     float: left;
   }
 }
+
+  /* Laptops / Desktops: minimum width of 1024px */
+  @media only screen and (min-width: 1024px) {
+    header.user-info {
+      width: 35%;
+      float: left;
+      height: inherit;
+      margin: 180px 0 0 50px;
+      padding: 2em 1em 1em 1em;;
+      justify-content: center;
+      position: fixed;
+      
+    }
+
+    .name-bio {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .name-bio p {
+      display: flex;
+      background-color: rgba(255, 255, 255, 0.5);
+      padding: 0.5em;
+    }
+  }
