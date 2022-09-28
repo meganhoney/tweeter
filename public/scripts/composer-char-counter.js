@@ -1,3 +1,5 @@
+// Character counter for tweet form input
+
 $(document).ready(function() {
   $("#tweet-text").on( "keyup", function(event) {
     
