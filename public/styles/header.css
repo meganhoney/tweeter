@@ -8,3 +8,13 @@ header.user-info {
   background-color: #B0C2FF;
   background-image: url(../images/transparent_header_bg_batthern.png);
 }
+
+/** MEDIA QUERIES **/
+
+/* Tablet: minimum width of 768px to maximum width of 1024px */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  header.user-info {
+    width: 40%;
+    float: left;
+  }
+}
