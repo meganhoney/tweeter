@@ -1,18 +1,24 @@
 # Tweeter Project
 
-Tweeter is a simple, single-page Twitter clone.
-
-This repository is the starter code for the project: Students will fork and clone this repository, then build upon it to practice their HTML, CSS, JS, jQuery and AJAX front-end skills, and their Node, Express back-end skills.
+Tweeter is a simple, single-page Twitter clone built off of starter code from [Lighthouse Labs](https://github.com/lighthouse-labs/tweeter). The project was completed with HTML, CSS, JS, jQuery and AJAX to practice front-end development. 
 
 ## Getting Started
 
-1. [Create](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template) a new repository using this repository as a template.
-2. Clone your repository onto your local device.
-3. Install dependencies using the `npm install` command.
-3. Start the web server using the `npm run local` command. The app will be served at <http://localhost:8080/>.
+1. Fork this repository and clone it to your local device.
+2. Install dependencies using the `npm install` command.
+3. Start the web server using the `npm start` command. The app will be served at <http://localhost:8080/>.
 4. Go to <http://localhost:8080/> in your browser.
 
 ## Dependencies
 
 - Express
 - Node 5.10.x or above
+- Body Parser
+- Chance
+
+## Screenshots
+
+!["App layout at 1024 px and above, with tweet composition"](https://github.com/meganhoney/tweeter/blob/master/docs/fullsize_tweetcomposition.png?raw=true)
+!["App layout between 768 px and 1024 px (tablet)"](https://github.com/meganhoney/tweeter/blob/master/docs/tabletsize.png?raw=true)
+!["App layout under 768 px (mobile)"](https://github.com/meganhoney/tweeter/blob/master/docs/mobilesize.png?raw=true)
+!["Error handling"](https://github.com/meganhoney/tweeter/blob/master/docs/mobilesize_errorhandling.png?raw=true)
