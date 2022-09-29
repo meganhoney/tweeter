@@ -4,10 +4,10 @@
 $(document).ready(function() {
   $("#tweet-text").on("keyup", function(event) {
     
-    $text = $(this).val();
-    $charsLeft = 140 - $text.length;
+    const $text = $(this).val();
+    const $charsLeft = 140 - $text.length;
     
-    $counter = $(this).closest("form").find(".counter");
+    const $counter = $("#counter");
     $counter.text($charsLeft);
 
     if ($charsLeft < 0) {
