@@ -42,6 +42,7 @@ $(document).ready(function() {
       })
         .then(() => {
           $("#tweet-text").val('');
+          $("#counter").text("140");
           loadTweets();
         });
     }
@@ -96,7 +97,7 @@ $(document).ready(function() {
   const renderTweets = function(tweets) {
   
     const $tweets = $("#tweets-container").empty();
-    
+
     // loops through tweets
     // calls createTweetElement for each tweet
     // takes return value and appends it to the tweets container
