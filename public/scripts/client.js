@@ -43,6 +43,7 @@ $(document).ready(function() {
         .then(() => {
           $("#tweet-text").val('');
           $("#counter").text("140");
+          $("#error-message").css("display", "none");
           loadTweets();
         });
     }
